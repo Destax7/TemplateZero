@@ -1,0 +1,161 @@
+/* Start Aside */
+
+aside ul li:first-child a {
+    background-color: initial;
+}
+
+aside ul li:nth-of-type(5) a {
+    background-color: #f6f6f6;
+}
+
+aside ul li a:hover {
+    background-color: #f6f6f6;
+}
+/* End Aside */
+
+/* Start Courses Grid */
+
+.course-grid {
+    padding: 
+        var(--pt-father)
+        var(--pr-father)
+        var(--pb-father)
+        var(--pl-father);
+    display: grid;    
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1rem;    
+}
+
+.course-grid .gbox {
+    background-color: var(--main-bg);        
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.course-grid .gbox .image-holder {    
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;    
+    max-width: 25rem;
+    width: 100%;
+    min-height: 15.75rem;
+    position: relative;
+}
+
+.course-grid .gbox .image-holder img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 0.15rem solid white;
+}
+
+.course-grid .gbox .info  {
+    padding-top: var(--pt-father);
+    padding-left: var(--pl-father);
+    padding-right: var(--pr-father);
+    padding-bottom: var(--pb-father);
+    margin: 0.5rem 0;
+}
+
+.course-grid .gbox .info h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.course-grid .gbox .info h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    color: var(--secfc);
+}
+
+
+.course-grid .gbox .line {    
+    position: relative;
+    z-index:0;
+}
+
+.course-grid .gbox .line::before {
+    content: "";
+    position: absolute;
+    height: 0.004rem;
+    width: 100%;
+    background-color: #f0f0f0;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: -1;
+}
+
+.course-grid .gbox h5 {
+    color: white;
+    background-color: var(--mblue);
+    font-size: 0.813rem;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.course-grid .gbox .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 
+        var(--pt-father)
+        var(--pr-father)
+        var(--pb-father)
+        var(--pl-father);
+}
+
+.course-grid .gbox .stats h6 {
+    color: var(--secfc);
+    font-size: 0.813rem;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+/* Start Images URLS */
+
+.course-grid > .gbox:nth-of-type(1) .image-holder,
+.course-grid > .gbox:nth-of-type(8) .image-holder {
+    background-image: url("../media/course-01.jpg");    
+}
+
+.course-grid > .gbox:nth-of-type(2) .image-holder,
+.course-grid > .gbox:nth-of-type(6) .image-holder {
+    background-image: url("../media/course-02.jpg");    
+}
+
+.course-grid > .gbox:nth-of-type(3) .image-holder,
+.course-grid > .gbox:nth-of-type(7) .image-holder {
+    background-image: url("../media/course-03.jpg");    
+}
+
+.course-grid > .gbox:nth-of-type(4) .image-holder,
+.course-grid > .gbox:nth-of-type(10) .image-holder {
+    background-image: url("../media/course-04.jpg");    
+}
+
+.course-grid > .gbox:nth-of-type(5) .image-holder,
+.course-grid > .gbox:nth-of-type(9) .image-holder {
+    background-image: url("../media/course-05.jpg");    
+}
+
+
+/* End Images URLS */
+
+/* media queries */
+
+@media (width < 768px) {
+    .course-grid {        
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        
+    }
+}
+
+/* End Courses Grid */

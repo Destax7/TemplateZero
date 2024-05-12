@@ -1,16 +1,4 @@
 /* Start Components */
-.container h3.titles {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-}
-
-
-.container h4.description {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--secfc);
-}
 /* End Components */
 
 /* Start father */

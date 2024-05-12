@@ -1,0 +1,338 @@
+/* Start Aside */
+
+    aside ul li:first-child a {
+        background-color: initial;
+    }
+
+    aside ul li:nth-of-type(3) a {
+        background-color: #f6f6f6;
+    }
+
+    aside ul li a:hover {
+        background-color: #f6f6f6;
+    }
+
+/* End Aside */
+
+
+/* Start Profile Grid */
+
+    .profile-grid {
+        margin-top: 1.7rem;
+        padding-left: var(--pl-father);
+        padding-right: var(--pr-father);
+        padding-bottom: var(--pb-father);
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem;        
+    }
+
+    .profile-grid > * {
+        background-color: var(--main-bg);        
+        border-radius: .5rem;
+        padding-top: var(--pt-father);
+        padding-left: var(--pl-father);
+        padding-right: var(--pr-father);
+        padding-bottom: var(--pb-father)
+    }
+    
+
+    /* media queries */
+
+    @media (width < 768px) {
+        .profile-grid {
+            grid-template-columns: minmax(12rem, 1fr); 
+            grid-template-rows:none; 
+        }
+
+        .person.flex,
+        .skills,
+        .activities {
+            grid-area: initial !important;
+        }
+        
+    }
+
+    /* Start Division Person */
+
+    .person.flex {
+        display: flex;
+        align-items: center;
+        grid-area: 1 / 1 / 2 / 4 ;        
+        padding: 0;
+    }
+
+    .person.flex .appearance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: .7rem;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+        padding-top: var(--pt-father);
+        padding-bottom: var(--pb-father);
+        border-right: var(--mborder);
+        height: fit-content;
+    }
+
+    .person.flex .appearance img {
+        width: 7rem;
+    }
+
+    .person.flex .appearance .bar {
+        width: 8.5rem;
+        height: .38rem;
+        border-radius: .6rem;
+        background-color: #eee;
+        position: relative;
+    }
+
+    .person.flex .appearance .stars i {
+        font-size: 0.813rem;
+        color: #f59e0b;
+    }
+
+    .person.flex .appearance .bar::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        border-radius: .6rem;
+        background-color: var(--mblue);
+
+
+    }
+
+    .person.flex .appearance h4 {
+        font-size: 1.188rem;
+        font-weight: 700;
+    }
+
+    .person.flex .appearance h5 {
+        color: var(--secfc);
+        font-weight: 500;
+    }
+
+    .person.flex .appearance h6 {
+        font-size: 0.813rem;
+        color: var(--secfc);
+        font-weight: 500;
+    }
+
+    .person.flex .info {
+        flex-grow: 1;
+        
+    }
+
+    .person.flex .info > div {
+        border-bottom: var(--mborder);
+        padding: 
+            var(--pt-father) 
+            var(--pr-father) 
+            var(--pb-father) 
+            var(--pl-father);
+        transition: .3s;
+    }
+
+    .person.flex .info > div:hover {
+        background-color: #eee;;
+    }
+
+    .person.flex .info > div > h3:first-of-type {
+        font-size: 0.938rem;
+        margin-bottom: .5rem;
+    }
+
+    .person.flex .info h3 {
+        font-size: 0.875rem;
+        color: var(--secfc);
+        font-weight: 500;
+    }
+
+    .person.flex .info span {
+        color: initial;
+        font-size: 0.875rem;        
+        font-weight: 500;
+    }
+
+    .person.flex .info .flex {
+        display: flex;
+        max-width: 63rem;
+        flex-wrap: wrap;
+        /* justify-content: space-evenly; */
+        gap: 1rem;
+    }
+
+    .person.flex .info .flex > * {
+        flex-basis: 14.6rem;
+    }
+    
+
+    
+    .person.flex .info .mtoggler {
+        width: 5.5rem;
+        height: 1.4rem;
+    }
+
+    .mtoggler::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;                                
+        font-size: .7rem;
+        height: 1rem;
+        width: 1rem;        
+    }
+
+    .mtoggler:checked::before {
+        content: "\f00d";
+        left: 4.25rem;
+        color: #ccc;
+    }
+
+    
+
+    @media (width > 1300px) {
+        .person.flex .info .flex > * {
+            flex-basis: 14rem;
+            text-align: center;
+            /* background-color:red; */
+        }
+    }
+
+    @media (width < 768px) {
+        .person.flex {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+
+        .person.flex .info > div {
+            /* padding: 0; */
+        }
+
+        .person.flex .info .flex {
+            max-width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .person.flex .appearance {
+            border-right: none;
+        }
+
+        .person.flex .info .mtoggler {
+            margin: 0 auto;
+        }
+
+        .person.flex .info .flex > * {
+            flex-basis: initial;
+            min-width: fit-content;
+            text-align: center;
+            /* background-color:red; */
+        }
+    }
+
+    /* End Division Person */
+
+    /* Start Division Skills */
+    .skills {
+        grid-area: 2 / 1 / 3 / 2 ;
+    }
+
+    .langs {
+        margin-top: 1.5rem;
+    }
+
+    .langs > div {
+        display: flex;
+        gap: .5rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .langs > div:not(:last-child) {
+        border-bottom: var(--mborder);
+    }
+
+    .langs h5 {
+        width: fit-content;        
+        font-size: 0.875rem;
+        background-color: var(--main-grey);
+        font-weight: 500;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.4rem;
+    }
+    /* End Division Skills */
+
+    /* Start Division Activities */
+    .activities {
+        grid-area: 2 / 2 / 3 / 4 ;
+    }
+
+    .activities .flex {
+        display: flex;
+        align-items: center;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        border-bottom: var(--mborder);
+    }
+
+    .activities .flex:last-child {
+        border-bottom: none;
+    }
+
+    .activities .flex > :last-child {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .activities .flex h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: .5rem;
+    }
+
+    .activities .flex h5 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--secfc);
+    }
+
+    .activities .flex img {
+        width: 4rem;
+        margin-right: 0.8rem;
+        
+    }
+
+    /* media queries */
+
+    @media (width < 768px) {
+        .activities .flex {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .activities .flex img {
+            margin-right: 0;
+            /* margin-bottom: 1rem; */
+        }
+
+        .activities .flex > :last-child {
+            margin-left: initial;
+            text-align: inherit;
+        }
+    }
+
+    /* End Division Activities */
+
+/* End Profile Grid */

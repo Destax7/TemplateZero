@@ -1,0 +1,163 @@
+/* Start Aside */
+
+aside ul li:first-child a {
+    background-color: initial;
+}
+
+aside ul li:nth-of-type(6) a {
+    background-color: #f6f6f6;
+}
+
+aside ul li a:hover {
+    background-color: #f6f6f6;
+}
+/* End Aside */
+
+/* Start Friends Grid */
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 1rem;
+    padding: 
+        var(--pt-father)
+        var(--pr-father)
+        var(--pb-father)
+        var(--pl-father);
+}
+
+.friends-grid .gbox {
+    background-color: var(--main-bg);        
+    border-radius: .5rem;
+    padding: 
+        var(--pt-father)
+        var(--pr-father)
+        var(--pb-father)
+        var(--pl-father);
+    overflow: hidden;
+    position: relative;
+}
+
+
+.friends-grid .gbox .icons {
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.friends-grid .gbox .icon-holder {
+    background-color: var(--main-grey);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secfc);
+    font-size: 0.813rem;
+}
+
+.friends-grid .gbox img {
+    display: block;
+    width: 6rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.friends-grid .gbox .person {
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+.friends-grid .gbox .person h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.friends-grid .gbox .person h4 {
+    font-size: 0.813rem;
+    font-weight: 500;
+    color: var(--secfc);
+}
+
+.friends-grid .gbox .stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-top: var(--mborder);
+    border-bottom: var(--mborder);
+}
+
+.friends-grid .gbox .stats h5 {
+    margin-bottom: .6rem;
+    font-size: 0.875rem;
+    font-weight: 500;   
+    vertical-align: middle;
+}
+
+.friends-grid .gbox .stats > div:first-child > :last-child {
+    margin-bottom: 0;
+}
+
+.friends-grid .gbox .stats h5 i {
+    margin-right: 0.4rem;
+}
+
+.friends-grid .gbox .stats h2 {
+    color: rgba(245, 159, 11, 0.195);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.friends-grid .gbox .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0;
+    gap: 0.5rem;
+}
+
+.friends-grid .gbox .flex h4 {
+    font-size: 0.813rem;
+    color: var(--secfc);
+    font-weight: 500;
+}
+
+.friends-grid .gbox .flex div {
+    display: flex;
+    gap: .5rem;
+}
+
+.friends-grid .gbox .flex a {
+    font-size: 0.813rem;
+    color: white;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+/* End Friends Grid */
+
+/* media queries */
+
+@media (width < 400px) {
+    .friends-grid {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+
+    .friends-grid .gbox .flex h4 {
+        font-size: 0.751rem;
+        
+    }
+}

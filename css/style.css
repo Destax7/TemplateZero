@@ -47,6 +47,20 @@
 /* End Wildcard, Variables and document elements */
 
 /* Start Components */
+
+    h3.titles {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: .3rem;
+    }
+
+
+    h4.description {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--secfc);
+    }
+
     .button-1 {
         display: block;
         width: fit-content;
@@ -247,10 +261,7 @@
         background-color: #f1f5f9;
         overflow: hidden;
         flex-grow: 1;
-        min-height: 100dvh;
-        /* padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 1rem; */
+        min-height: 100dvh;        
     }
 
     /* Start division Keyword */
@@ -441,19 +452,6 @@
 
         .main-grid .box.welcome div:first-of-type img {
             width: 12rem;
-        }
-
-        .main-grid h3.titles {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: .3rem;
-        }
-
-        
-        .main-grid h4.description {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--secfc);
         }
 
         .main-grid .box.welcome .flexb {
@@ -1467,10 +1465,10 @@
 
     @media (width < 768px) {
         .father > * {
-
-            padding-left: 1.2rem ; 
-            padding-right: 1.2rem ;
+            padding-left: 0.7rem !important; 
+            padding-right: 0.7rem !important;
         }
+
         .last-project img {
             display: none;
         }

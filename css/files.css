@@ -1,0 +1,14 @@
+/* Start Aside */
+aside ul li:first-of-type a {
+    background-color: initial;
+}    
+
+aside ul li:nth-of-type(7) a {
+    background-color: #f6f6f6;
+}
+
+aside ul li a:hover {
+    background-color: #f6f6f6;
+}
+
+/* End Aside */
