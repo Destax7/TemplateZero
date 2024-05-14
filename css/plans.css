@@ -1,0 +1,131 @@
+/* Start Aside */
+
+aside ul li:first-child a {
+    background-color: initial;
+}
+
+aside ul li:nth-of-type(8) a {
+    background-color: #f6f6f6;
+}
+
+aside ul li a:hover {
+    background-color: #f6f6f6;
+}
+
+/* End Aside */
+
+/* Start Plans Grid */
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 1rem;
+    padding: 
+            var(--pt-father)
+            var(--pr-father)
+            var(--pb-father)
+            var(--pl-father);            
+}
+
+.plans-grid .gbox {    
+    background-color: var(--main-bg);        
+        padding: 
+            var(--pt-father)
+            var(--pr-father)
+            var(--pb-father)
+            var(--pl-father);            
+        overflow: hidden;
+        position: relative;
+}
+
+.plans-grid .gbox .sign {
+    height: 8.5rem;
+    color: white;
+    border: 0.2rem solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.plans-grid .gbox:nth-of-type(1) .sign {
+    background-color: var(--mgreen);
+    outline: 0.2rem solid var(--mgreen);
+}
+
+.plans-grid .gbox:nth-of-type(2) .sign {
+    background-color: var(--mblue);
+    outline: 0.2rem solid var(--mblue);
+}
+
+
+.plans-grid .gbox:nth-of-type(3) .sign {
+    background-color: var(--myellow);
+    outline: 0.2rem solid var(--myellow);
+}
+
+
+.plans-grid .gbox .sign h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.plans-grid .gbox .sign h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.plans-grid .gbox .flex {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    border-bottom: var(--mborder);
+}
+
+
+.plans-grid .gbox .flex > i:nth-of-type(1) {    
+    font-size: 1.188rem;
+    margin-right: 0.5rem;
+}
+
+.plans-grid .gbox .flex h4 {
+    font-size: 0.938rem;
+    font-weight: 500;
+}
+
+.plans-grid .gbox .flex > i:nth-of-type(2) {    
+    font-size: 0.938rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.plans-grid .gbox a {
+    display: block;
+    width: fit-content;
+    padding: 0.2rem 0.6rem;
+    color: white;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+.plans-grid .gbox > h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secfc);
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+}
+/* End Plans Grid */
+
+/* media queries */
+
+@media (width < 565px) { 
+    .plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));   
+    }
+}
